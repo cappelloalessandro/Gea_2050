@@ -1,0 +1,190 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* grandezza delle immagini nel main adattabili a tutte le dimensioni */
+main article img{
+    width: 100%;
+    height: auto;
+}
+body{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family:'Audiowide', sans-serif;
+}
+/* sfondo Home */
+header{
+    width: 100%;
+    height: 1000px;
+    background: url(img/home.png) no-repeat center center;
+    background-size: cover;
+}
+/* distanza dai bordi */
+header img{
+    padding: 50px;
+}
+/* menù di navigazione */
+nav li{
+    display: inline-block; 
+    list-style: none; 
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-left: 20px;
+    padding: 65px 0 0 0;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat Light', sans-serif;
+}
+nav a:hover{
+   color:#E0792B;
+}
+/* Titolo della Home */
+header h1{
+    color:white;
+    font-size:72px;
+    flex-direction: row;
+    padding: 100px 150px;
+}
+.logo{
+    width: 100px;
+    height: auto; 
+}
+/* div contenente logo e menù */
+.navbar{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    font-size: 72px;
+    align-content: center;
+}
+/* seconda fascia */
+main{
+    display: flex;
+}
+/* div che divide in due colonne la fascia */
+.container{
+    width: 50%;
+    height: auto;
+}
+/* id da utilizzare per ogni fascia nera all'interno del sito */
+#black{
+    background-color: #000; 
+}
+h2{
+    font-size: 30px;
+}
+main h2{
+    color: #fff;
+    text-align: center;
+    padding-top: 250px ;
+}
+main p{
+    color: #fff;
+}
+/* comando per creare la linea verticale */
+.container img{
+    border-right: 2px solid #fff;
+}
+.container p{
+    padding: 30px;
+}
+/* terza fascia */
+section{
+    display: flex;
+}
+/* div per il titolo fuori da section */
+.title h2{
+    text-align: center;
+    display: block;
+    padding: 50px;
+}
+/* sottotitoli terza fascia */
+section .container h3{
+    text-align: center;
+    padding-bottom: 50px;
+}
+section .container p{
+    text-align: center;
+}
+/* colore nero al footer */
+.wide{
+    background-color: #000;
+    padding: 20px;
+}
+/* testo nel footer */
+footer p{
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+}
+/* cookie in fondo al footer */
+.cookie{
+    display: inline-block;
+    color: #837f7f;
+    padding: 25px;
+    font-size: 14px;
+}
+
+    /* Chi Siamo css page */
+
+.contatti {   
+width: 100%;
+height: 600px;
+background: url(img/contatti.jpg) no-repeat center center;
+background-size: cover;
+}
+.titolo{
+    margin-top:-75px;
+    font-size: 70px;
+    justify-content: center;
+}
+.descrizione{ 
+    font-size: 20px;
+    width:50%;
+    padding: 25px;
+    margin-top: -65px;
+    text-align: center;
+    justify-content: justify;
+    color: #fff;
+}
+.team img{
+    height: 250px;
+    width: 250px;
+}
+.team{
+    display: flex;
+    justify-content: space-between;
+}
+.team div{
+    padding: 20px 50px;
+    width:100%;
+}
+.persona h3,p{
+    padding: 0 30 0 0; 
+    text-align: center;
+    justify-content: center;
+}
+
+.foto { 
+      filter: gray;
+      /* scala del grigio per il filtro */
+      filter: grayscale(1); 
+      /* Animazione prima dell'hover */
+      transition: all .8s ease-in-out;  
+}
+
+.foto:hover {
+    /* Annulla il filtro grigio */
+    filter: none;
+    filter: grayscale(0);
+    /* ingrandisce la foto */
+    transform: scale(1.01);
+}
