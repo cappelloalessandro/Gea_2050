@@ -7,28 +7,36 @@ main article img{
     width: 100%;
     height: auto;
 }
+
 body{
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+
 h1,
 h2,
-h3,
-h4,
-h5{
+h3
+{
     font-family:'Audiowide', sans-serif;
 }
-/* sfondo Home */
+
+/* sfondo*/
 header{
     width: 100%;
     height: 1000px;
-    background: url(img/home.png) no-repeat center center;
-    background-size: cover;
 }
+
+.white {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* distanza dai bordi */
 header img{
     padding: 50px;
 }
+
 /* menù di navigazione */
 nav li{
     display: inline-block; 
@@ -38,14 +46,17 @@ nav li{
     margin-left: 20px;
     padding: 65px 0 0 0;
 }
+
 nav a{
     color: #fff;
     text-decoration: none;
     font-family: 'Montserrat Light', sans-serif;
 }
+
 nav a:hover{
    color:#E0792B;
 }
+
 /* Titolo della Home */
 header h1{
     color:white;
@@ -53,10 +64,12 @@ header h1{
     flex-direction: row;
     padding: 100px 150px;
 }
+
 .logo{
     width: 100px;
     height: auto; 
 }
+
 /* div contenente logo e menù */
 .navbar{
     display: flex;
@@ -65,126 +78,117 @@ header h1{
     font-size: 72px;
     align-content: center;
 }
+
 /* seconda fascia */
 main{
     display: flex;
+    /* AGGIUNGERE padding: 50px 0px; CON MEDIAQUERY */
 }
-/* div che divide in due colonne la fascia */
-.container{
+
+/* divide in due articoli la fascia */
+article {
     width: 50%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+article h3 {
+    align-self: center;
+}
+
+
 /* id da utilizzare per ogni fascia nera all'interno del sito */
-#black{
-    background-color: #000; 
+.black{
+    background-color: #000;
+    color: white; 
 }
+
+article p {
+    width: 70%;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
 h2{
     font-size: 30px;
 }
-main h2{
-    color: #fff;
-    text-align: center;
-    padding-top: 250px ;
-}
-main p{
-    color: #fff;
-}
-/* comando per creare la linea verticale */
-.container img{
-    border-right: 2px solid #fff;
-}
-.container p{
+
+p{
     padding: 30px;
 }
-/* terza fascia */
-section{
-    display: flex;
-}
+
 /* div per il titolo fuori da section */
-.title h2{
+.title {
     text-align: center;
-    display: block;
     padding: 50px;
+    width: 100%;
 }
+
+.subtitle {
+    text-align: center;
+    width: 50%;
+}
+
 /* sottotitoli terza fascia */
-section .container h3{
+section h3{
     text-align: center;
     padding-bottom: 50px;
 }
-section .container p{
+
+section p{
     text-align: center;
 }
+
 /* colore nero al footer */
 .wide{
     background-color: #000;
     padding: 20px;
 }
+
 /* testo nel footer */
 footer p{
     color: #fff;
     padding: 10px;
     font-size: 14px;
 }
-/* cookie in fondo al footer */
-.cookie{
-    display: inline-block;
-    color: #837f7f;
-    padding: 25px;
-    font-size: 14px;
+
+footer {
+    display: flex;
+    padding: 30px 20px 60px;
 }
 
-    /* Chi Siamo css page */
-
-.contatti {   
-width: 100%;
-height: 600px;
-background: url(img/contatti.jpg) no-repeat center center;
-background-size: cover;
-}
-.titolo{
-    margin-top:-75px;
-    font-size: 70px;
-    justify-content: center;
-}
-.descrizione{ 
-    font-size: 20px;
-    width:50%;
-    padding: 25px;
-    margin-top: -65px;
-    text-align: center;
-    justify-content: justify;
+.menu_social {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
     color: #fff;
 }
-.team img{
-    height: 250px;
-    width: 250px;
-}
-.team{
-    display: flex;
-    justify-content: space-between;
-}
-.team div{
-    padding: 20px 50px;
-    width:100%;
-}
-.persona h3,p{
-    padding: 0 30 0 0; 
-    text-align: center;
-    justify-content: center;
+
+.menu_social span {
+    font-size: 50px;
 }
 
-.foto { 
-      filter: gray;
-      /* scala del grigio per il filtro */
-      filter: grayscale(1); 
-      /* Animazione prima dell'hover */
-      transition: all .8s ease-in-out;  
+footer h3 {
+    margin-bottom: 10px;
 }
 
-.foto:hover {
-    /* Annulla il filtro grigio */
-    filter: none;
-    filter: grayscale(0);
-    /* ingrandisce la foto */
-    transform: scale(1.01);
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
+
+footer a:hover {
+    color: #E0792B;
+}
+
+
+/* §§§§§§  QUI INIZIA IL CSS DELLA HOME HOME §§§§§§§ */
+#home{
+    background: url(img/home.png) no-repeat center center;
+    background-size: cover;
+}
+
+
