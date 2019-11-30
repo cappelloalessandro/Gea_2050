@@ -4,8 +4,9 @@
 }
 /* grandezza delle immagini nel main adattabili a tutte le dimensioni */
 main article img{
-    width: 100%;
+    width: 85%;
     height: auto;
+    align-self: flex-start;
 }
 
 body{
@@ -24,6 +25,11 @@ h3
 header{
     width: 100%;
     height: 1000px;
+}
+
+#home h1 {
+    font-size: 60px;
+    padding-top: 30px;
 }
 
 .white {
@@ -82,6 +88,7 @@ nav a:hover{
 main{
     display: flex;
     /* AGGIUNGERE padding: 50px 0px; CON MEDIAQUERY */
+    
 }
 
 /* divide in due articoli la fascia */
@@ -92,6 +99,23 @@ article {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.linea_vert {
+    width: 3px;
+    height: 280px;
+    background-color: #fff;
+    opacity: .5;
+    align-self: flex-end;
+    border-top-left-radius: 14%;
+    border-top-right-radius: 14%;
+}
+
+.linea_oriz {
+    width: 150px;
+    height: 1px;
+    background-color: #fff;
+    margin: 25px 0px 35px 0px;
 }
 
 article h3 {
@@ -203,23 +227,75 @@ footer a:hover {
     padding-bottom: 5px;
 }
 
-#scenari p {
+#scenari header p {
     color: #fff;
     width: 50%;
 }
 
-.linea_oriz {
+#scenari h1{
+    color:white;
+    font-size: 50px; 
+}
+
+#scenari .main img{
+    width: 550px;
+    height: auto;
+    align-self: unset;
+}
+
+#scenari article {
+    height: 600px;
+}
+
+.black .linea_oriz {
     width: 150px;
     height: 1px;
     background-color: #fff;
-    margin-bottom: 35px;
+    margin: 25px 0px 35px 0px;
+    align-self: flex-end;
 }
 
-#scenari h1{
-    color:white;
-    font-size: 50px;
-    margin-bottom: 20px;
+#scenari .black article p {
+    text-align: right;
 }
+
+#scenari .black .contenitore-interno {
+    width: 67%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+#scenari .white .contenitore-interno {
+    width: 67%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#scenari .white article p {
+    text-align: left;
+    padding-top: 10px;
+}
+
+#scenari .contenitore-interno p {
+    width: 100%;
+}
+
+#scenari .main .white {
+    background-color: white;
+}
+
+#scenari .white .linea_oriz {
+    width: 150px;
+    height: 1px;
+    background-color: #000;
+    margin: 25px 0px 35px 0px;
+    align-self: flex-start;
+}
+
 
 
 
