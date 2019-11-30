@@ -57,12 +57,11 @@ nav a:hover{
    color:#E0792B;
 }
 
-/* Titolo della Home */
-header h1{
-    color:white;
-    font-size:72px;
-    flex-direction: row;
-    padding: 100px 150px;
+.testi-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 150px;
+    color: #fff;
 }
 
 .logo{
@@ -114,10 +113,6 @@ article p {
 
 h2{
     font-size: 30px;
-}
-
-p{
-    padding: 30px;
 }
 
 /* div per il titolo fuori da section */
@@ -185,10 +180,47 @@ footer a:hover {
 }
 
 
-/* §§§§§§  QUI INIZIA IL CSS DELLA HOME HOME §§§§§§§ */
+/* §§§§§§  QUI INIZIA IL CSS DELLA HOME -HOME- §§§§§§§ */
 #home{
     background: url(img/home.png) no-repeat center center;
     background-size: cover;
 }
+
+#home .testi-header {
+    padding-top: 50px;
+}
+
+/* §§§§§§  QUI INIZIA IL CSS -SCENARI- §§§§§§§ */
+
+
+#scenari {
+    background: url(img/esperienza.png) no-repeat center center;
+    background-size: cover;
+}
+
+.scheda_selezionata {
+    border-bottom: #fff solid 1px;
+    padding-bottom: 5px;
+}
+
+#scenari p {
+    color: #fff;
+    width: 50%;
+}
+
+.linea_oriz {
+    width: 150px;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 35px;
+}
+
+#scenari h1{
+    color:white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+
 
 
