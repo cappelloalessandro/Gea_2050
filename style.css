@@ -1,28 +1,28 @@
 *{
     margin: 0px;
     padding: 0px;
-    
 }
-/* grandezza delle immagini nel main adattabili a tutte le dimensioni */
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
 main article img{
-    width: 85%;
+    width: 95%;
     height: auto;
-    align-self: flex-start;
+    overflow: hidden;
 }
-
 body{
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-
 h1,
 h2,
 h3
 {
     font-family:'Audiowide', sans-serif;
 }
-
-/* sfondo*/
 header{
     width: 100%;
     height: 100vh;
@@ -34,8 +34,8 @@ header{
 }
 
 #home h1 {
-    font-size: 60px;
-    padding-top: 30px;
+    font-size: 5rem;
+    padding-top: 150px;
 }
 
 .white {
@@ -48,6 +48,9 @@ header{
 /* distanza dai bordi */
 header img{
     padding: 50px;
+}
+.download :hover{
+    color: #E0792B;
 }
 
 /* menù di navigazione */
@@ -97,6 +100,11 @@ main{
     /* AGGIUNGERE padding: 50px 0px; CON MEDIAQUERY */
     
 }
+.bottone{
+    background-color: #d1d1d1;
+    width: 20%;
+    height: auto;
+}
 
 /* divide in due articoli la fascia */
 article {
@@ -130,7 +138,6 @@ article h3 {
     align-self: center;
 }
 
-
 /* id da utilizzare per ogni fascia nera all'interno del sito */
 .black {
     background-color: #000;
@@ -153,6 +160,17 @@ article h3 {
     transform-origin: top left;
     transform: skewY(3deg);
 }
+.nero{
+    background-color: #000;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+}
 
 .white + .black::after {
     position: absolute;
@@ -165,9 +183,22 @@ article h3 {
     bottom: 0;
     left: 0;
     transform-origin: bottom left;
-    transform: skewY(-4deg);
+    transform: skewY(-3deg);
 }
 
+.white + .black::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewY(3deg);
+}
 
 article p {
     width: 70%;
@@ -177,6 +208,9 @@ article p {
 
 h2{
     font-size: 30px;
+}
+article a{
+    color: #000;  
 }
 
 /* div per il titolo fuori da section */
@@ -233,6 +267,7 @@ footer {
 
 footer h3 {
     margin-bottom: 10px;
+    padding-left: 12px;
 }
 
 footer a {
@@ -244,16 +279,101 @@ footer a:hover {
     color: #E0792B;
 }
 
-
 /* §§§§§§  QUI INIZIA IL CSS DELLA HOME -HOME- §§§§§§§ */
 #home{
     background: url(img/home.png) no-repeat center center;
     background-size: cover;
 }
-
+n
 #home .testi-header {
     padding-top: 50px;
 }
+#banner{
+    min-height: 400px;
+    color: black;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 10px;
+    text-shadow: 1px 1px 10px black;
+    display: block;
+}
+.banner1{
+    background-image: url(img/banner_home.jpg);
+}
+.banner2{
+    background-image: url(img/banner_home2.jpg);
+}
+#banner h2{
+    padding-top: 200px;
+    font-size: 3rem;
+}
+#banner p{
+    font-size: 1.5rem;
+    padding-top: 10PX;
+}
+@media(max-width:900px){
+    header img{
+        padding:50px 0px 0px 25px;
+    }
+    .testi-header{
+        margin-left: 25px;
+        padding-top: 60px;
+    }
+    #home h1{
+        font-size: 2.5rem;
+        padding-left:25px;
+    }
+    main{
+        padding-top:40px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .black{
+        height: auto;
+    }
+    .white{
+        flex-direction: column;
+    }
+    footer{
+        flex-direction: column-reverse;
+
+    }
+    .menu_social{
+        width: 100%;
+    }
+    .subtitle{
+        text-align: center;
+        width: 100%;
+    }
+    .h3dekstop{
+        display: none;
+    }
+    #scenari h1{
+        font-size: 2.5rem;
+    }
+
+  }
+@media(min-width:900px){
+    .h3mobile{
+        display: none;
+    }
+}
+@media(max-width:550px){
+    #home h1{
+        font-size: 2rem;
+    }
+}
+
+
 
 /* §§§§§§  QUI INIZIA IL CSS -SCENARI- §§§§§§§ */
 
@@ -337,7 +457,7 @@ footer a:hover {
     align-self: flex-start;
 }
 
-#scenari .fa-chevron-down {
+.fa-chevron-down {
     color: #fff;
     text-align: center;
     font-size: 40px;
@@ -346,9 +466,253 @@ footer a:hover {
     width: inherit;
 }
 
+
+/* §§§§§§  QUI INIZIA IL CSS -APP- §§§§§§§ */
+#app{
+    background: url(img/app.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#app h1{
+    color:white;
+    font-size: 50px; 
+}
+
+#app .testi-header{
+    flex-direction: row ;
+}
+
+
+#aggio .img6 {
+    padding: 0px 0px 25px 50px;
+}
+
+#aggio  .img5{
+    padding-left: 150px;
+}
+#aggio .img15{
+
+    padding: 70px 0px 350px 350px;
+    
+}
+
+
+.paragrafo{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.download{
+    font-size: 60px;
+}
+.downloadimg{
+    flex-direction: row-reverse;
+    /* justify-content: space-between; */
+    padding-right:10px;
+
+}
+
+
+.content {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 30px;
+      
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+  }
+  
+  .now {
+    flex-grow: 3;
+    padding-left: 33px;
+  
+  }
+  
+
+  @media(max-width:1000px){
+    .content{
+      flex-direction: column;
+      
+    }
+    .store{
+        padding-left: 65px;
+    }
+     article{
+        width:100%;
+        flex-direction: column-reverse;
+    } 
+  }
+.colonna{
+    display: flex;
+    flex-direction: column;
+}
+
+.now {
+    z-index: 2;
+}
+ .store {
+     flex-grow: 2;
+     z-index: 2;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+ }
+
+ #aggio .black {
+     height: auto;
+ }
+
+ .hrbyaggio {
+     z-index: 2;
+ }
+
+ #aggio .white + .black::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    transform-origin: none;
+}
+
+#aggio .store img{
+    padding: 10px 50px;
+}
+
+@media(max-width:1000px){
+    .content{
+      flex-direction: column;
+      
+    }
+    .store{
+        padding-left: 65px;
+    }
+     article{
+        width:100%;
+        flex-direction: column;
+    } 
+    
+  }
+  #calendario header {
+    background: url(img/calendario.jpg) no-repeat center center;
+    background-size: cover;
+}
+#calendario header h1 {
+    font-size: 50px;
+    padding-top: 70px;
+}
+#calendario header p {
+    color: #fff;
+    width: 50%;
+}
+article .calendario{
+    width: 33.33%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.calendario img{
+    padding-top: 30px;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    align-self: auto;
+}
+.calendario h3{
+   padding-top: 30px;
+}
+.calendario p{
+    padding-bottom: 50px;
+}
 /* Chi siamo */
 
 #chisiamo header {
     background: url(img/contatti.jpg) no-repeat center center;
     background-size: cover;
 }
+#chisiamo header p {
+    color: #fff;
+    width: 50%;
+}
+.team{
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    padding: 60px;
+}
+#chisiamo .team h2{
+    margin-bottom: 60px;
+    color:white;
+    font-size:40px;
+}
+#chisiamo .row{
+    display: flex;
+}
+#chisiamo .column {
+    justify-content: center;
+    text-align: center;
+}
+#chisiamo .column > a{
+    color: white;
+    font-size: 32px;
+    padding: 10px;
+    /* border-radius: 50%; */
+}
+#chisiamo .column>a:hover{
+    background: #E0792B;
+}
+#chisiamo .bordo{
+    display:block;
+    margin:auto;
+    width: 260px;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 40px;
+    margin-top: -40px;
+}
+#chisiamo .bordodescrizione{
+    display:block;
+    margin:auto;
+    width: 260px;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#chisiamo .persona img{
+    width: 16%;
+    filter: grayscale(100%);
+    transition: 0.7s all;
+}
+#chisiamo .persona > img:hover{
+    filter: none;
+}
+#chisiamo h3{
+    color: white;
+    margin-bottom: 25px;
+}
+#chisiamo .column>p{
+    /* Non riesco a spostare il p se non mettendogli un margin a sinistra.. DA VEDERE(?) */
+    margin: 10px 0 0 160px;
+    justify-content: center;
+}
+
