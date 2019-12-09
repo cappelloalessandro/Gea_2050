@@ -837,7 +837,6 @@ article .calendario{
     color: white;
     font-size: 32px;
     padding: 10px;
-    /* border-radius: 50%; */
 }
 #chisiamo .column>a:hover{
     background: #E0792B;
@@ -860,24 +859,30 @@ article .calendario{
     margin-bottom: 10px;
     margin-top: 20px;
 }
-
-#chisiamo .persona img{
-    width: 16%;
-    filter: grayscale(100%);
-    transition: 0.7s all;
-}
-#chisiamo .persona > img:hover{
-    filter: none;
-}
 #chisiamo h3{
     color: white;
     margin-bottom: 25px;
 }
-#chisiamo .column>p{
-    /* Non riesco a spostare il p se non mettendogli un margin a sinistra.. DA VEDERE(?) */
-    margin: 10px 0 0 160px;
+#chisiamo h4{
+    text-align:center;
+}
+#chisiamo .row{
+    flex-wrap: wrap;
     justify-content: center;
 }
-/* #chisiamo .card{
-    background-image: url(img/backcard.png) ;
-} */
+#chisiamo .card{
+    flex-direction: column;
+    text-align: center;
+    background-color: gray;
+    padding: 10px 50px;
+    justify-content: center;
+    height: 50%;
+    width: 30%;
+    border-radius: 15px;
+    margin:45px;
+    /* filter: grayscale(100%);
+    transition: 0.7s all; */
+}
+#chisisamo .card:hover{
+    /* filter: none;
+    } */
