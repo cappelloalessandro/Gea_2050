@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 a{
     text-decoration: none;
 }
@@ -34,8 +35,8 @@ header{
 }
 
 #home h1 {
-    font-size: 5rem;
-    padding-top: 150px;
+    font-size: 2.7rem;
+    padding-top: 80px;
 }
 
 .white {
@@ -85,9 +86,15 @@ nav a:hover{
     height: auto; 
 }
 
+.div-bottone {
+    text-align: center;
+    padding: 40px 0;
+}
+
 /* div contenente logo e menù */
 .navbar{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     color: #fff;
     font-size: 72px;
@@ -100,10 +107,44 @@ main{
     /* AGGIUNGERE padding: 50px 0px; CON MEDIAQUERY */
     
 }
+
 .bottone{
-    background-color: #d1d1d1;
-    width: 20%;
-    height: auto;
+    font-family:'Audiowide', sans-serif;
+    border: 2.5px solid #E0792B;
+    color: #fff;
+    background: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* .bottone a{
+    color: #fff;
+} */
+
+.bottone:hover {
+    color: #E0792B;
+}
+
+.bottone:hover::before {
+    height: 0%;
+}
+
+.bottone::before {
+    position: absolute;
+    color: #E0792B;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 180%;
+    background: #E0792B;
+    z-index: -1;
+    transition: 0.8s;
+    border-radius: 50% 50% 0 0;
 }
 
 /* divide in due articoli la fascia */
@@ -235,6 +276,10 @@ section p{
     text-align: center;
 }
 
+section article {
+    z-index: 4;
+}
+
 /* colore nero al footer */
 .wide{
     background-color: #000;
@@ -308,7 +353,7 @@ n
     background-image: url(img/banner_home.jpg);
 }
 .banner2{
-    background-image: url(img/banner_home2.jpg);
+    background-image: url(img/banner_home3.jpg);
 }
 #banner h2{
     padding-top: 200px;
@@ -370,6 +415,51 @@ n
 @media(max-width:550px){
     #home h1{
         font-size: 2rem;
+        margin-top: 30px;
+        padding-top: 0px;
+        line-height: 1.6;
+    }
+
+    h2 {
+        font-size: 27px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    article p {
+        width: 88%;
+        padding: 0;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+
+    #banner h2 {
+        text-align: center;
+        padding: 70px 0;
+        }
+
+    #banner p {
+        display: none;
+    }
+    
+
+    .title {
+        width: auto;
+    }
+
+    article img {
+        width: inherit;
+    }
+
+    nav li {
+        padding: 0;
+        max-width: min-content;
+        font-size: small;
+    }
+
+    .navbar {
+       display: flex;
+       justify-content: space-between;
     }
 }
 
@@ -399,9 +489,17 @@ n
 }
 
 #scenari #main img{
-    width: 550px;
+    width: 520px;
     height: auto;
     align-self: unset;
+}
+
+#scenari .black {
+    background-color: #121212;
+}
+
+#scenari .black img {
+    width: 450px !important;
 }
 
 #scenari article {
@@ -466,6 +564,70 @@ n
     width: inherit;
 }
 
+@media(max-width:550px){
+
+.logo {
+    padding: 20px 10px;
+    width: 60px;
+    height: auto;
+    display: block;
+    align-self: ;
+}
+
+.navbar {
+    justify-content: unset;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul li {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 12px;
+}
+
+.scheda_selezionata {
+    padding-bottom: 0;
+}
+
+.fa-chevron-down {
+    bottom: 3%;
+}
+
+#scenari .black img, #scenari .white img {
+    width: 340px !important;
+}
+
+#scenari header {
+    height: 100vh;
+    padding-bottom: 40px;
+}
+
+#scenari article {
+    height: auto;
+    padding-bottom: 35px;
+}
+
+#scenari h1 {
+    font-size: 30px;
+    padding-top: 25px;
+}
+
+
+#scenari .testi-header {
+    padding-top: 15px;
+}
+
+#scenari header p {
+    width: 90%;
+    font-size: 18px;
+}
+
+}
 
 /* §§§§§§  QUI INIZIA IL CSS -APP- §§§§§§§ */
 #app{
