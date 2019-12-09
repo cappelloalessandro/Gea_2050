@@ -804,6 +804,7 @@ article .calendario{
 .calendario p{
     padding-bottom: 50px;
 }
+
 /* Chi siamo */
 
 #chisiamo header {
@@ -877,4 +878,6 @@ article .calendario{
     margin: 10px 0 0 160px;
     justify-content: center;
 }
-
+/* #chisiamo .card{
+    background-image: url(img/backcard.png) ;
+} */
