@@ -631,7 +631,7 @@ n
     }
 }
 
-@media(min-width:400)(max-width:550px){
+/* @media(min-width:400) and (max-width:550px){ */
 
 .logo {
     padding: 20px 10px;
@@ -694,7 +694,6 @@ ul li {
     font-size: 18px;
 }
 
-}
 
 /* §§§§§§  QUI INIZIA IL CSS -APP- §§§§§§§ */
 #app{
@@ -834,8 +833,8 @@ ul li {
         width:100%;
         flex-direction: column;
     } 
-    
-  }
+}
+/* } */
   /* #calendario header {
     background: url(img/calendario.jpg) no-repeat center center;
     background-size: cover;
@@ -878,10 +877,8 @@ article .calendario{
     background: url(img/contatti.png) no-repeat center center;
     /* background-size: cover; */
 }
-#chisiamo header h5 {
-    color: #fff;
+#chisiamo header h4 {
     width: 50%;
-    margin-bottom: 270px;
 }
 
 #chisiamo .team{
@@ -901,14 +898,6 @@ article .calendario{
 #chisiamo .column {
     justify-content: center;
     text-align: center;
-}
-#chisiamo .column > a{
-    color: white;
-    font-size: 32px;
-    padding: 10px;
-}
-#chisiamo .column>a:hover{
-    background: #E0792B;
 }
 #chisiamo .bordo{
     display:block;
@@ -932,14 +921,12 @@ article .calendario{
     color: white;
     margin-bottom: 25px;
 }
-#chisiamo h4{
-    text-align:center;
-}
 #chisiamo .row{
     flex-wrap: wrap;
     justify-content: center;
 }
 #chisiamo .card{
+    display: flex;
     flex-direction: column;
     text-align: center;
     background-color: rgb(128, 94, 67);
@@ -949,6 +936,20 @@ article .calendario{
     width: 30%;
     border-radius: 15px;
     margin:45px;
+    align-items: center;
+}
+#chisiamo .social>a{
+    color: white;
+    font-size: 32px;
+    padding: 10px;
+}
+#chisiamo .social a:hover{
+    background: #E0792B;
+}
+
+#chisiamo .persona{
+    width: auto;
+    height: auto;
 }
 
 #chisiamo .card{
@@ -963,7 +964,7 @@ article .calendario{
     #chisiamo .card{
         width: 80%;
     }
-    #chisiamo header h5 {
+    #chisiamo header h4 {
         text-align: center;
         width: 100%;
         margin-bottom: 100px;
@@ -974,18 +975,22 @@ article .calendario{
     #chisiamo .card{
         width: 80%;
     }
-    #chisiamo header h5 {
+    #chisiamo header h4 {
         text-align: left;
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 60px;
     }
 }
 @media all and (min-width:1000px){
     #chisiamo .card{
         width: 30%;
     }
-    #chisiamo header h5 {
+    #chisiamo header h1 {
         text-align: left;
-        margin-bottom: 200px;
+        margin-top: 150px;
+    }
+    #chisiamo header h4 {
+        text-align: left;
+        margin-bottom: 150px;
     }
 }
