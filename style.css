@@ -412,6 +412,7 @@ n
         display: none;
     }
 }
+
 @media(max-width:550px){
     #home h1{
         font-size: 2rem;
@@ -564,7 +565,73 @@ n
     width: inherit;
 }
 
-@media(max-width:550px){
+@media(max-width:400px) {
+    .fa-chevron-down {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: unset;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        padding: 10px 10px;
+        width: 60px;
+        height: auto;
+        display: block;
+    }
+
+    ul li {
+        display: block;
+        font-size: 16px;
+        font-weight: 800;
+        padding-top: 8px;
+    }
+
+    .scheda_selezionata {
+        padding-bottom: 0;
+    }
+    
+    .fa-chevron-down {
+        bottom: 3%;
+    }
+    
+    #scenari .black img, #scenari .white img {
+        width: 340px !important;
+    }
+    
+    #scenari header {
+        height: 100vh;
+        padding-bottom: 40px;
+    }
+    
+    #scenari article {
+        height: auto;
+        padding-bottom: 35px;
+    }
+    
+    #scenari h1 {
+        font-size: 30px;
+        padding-top: 25px;
+    }
+    
+    
+    #scenari .testi-header {
+        padding-top: 15px;
+    }
+    
+    #scenari header p {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+@media(min-width:400)(max-width:550px){
 
 .logo {
     padding: 20px 10px;
@@ -768,7 +835,7 @@ ul li {
         flex-direction: column;
     } 
     
-}
+  }
   /* #calendario header {
     background: url(img/calendario.jpg) no-repeat center center;
     background-size: cover;
@@ -922,10 +989,3 @@ article .calendario{
         margin-bottom: 200px;
     }
 }
-
-
-
-
-
-/* filter: grayscale(100%);
-    transition: 0.7s all; */
