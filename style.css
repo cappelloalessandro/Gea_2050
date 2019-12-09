@@ -768,8 +768,8 @@ ul li {
         flex-direction: column;
     } 
     
-  }
-  #calendario header {
+}
+  /* #calendario header {
     background: url(img/calendario.jpg) no-repeat center center;
     background-size: cover;
 }
@@ -803,19 +803,21 @@ article .calendario{
 }
 .calendario p{
     padding-bottom: 50px;
-}
+} */
 
 /* Chi siamo */
 
 #chisiamo header {
-    background: url(img/contatti.jpg) no-repeat center center;
-    background-size: cover;
+    background: url(img/contatti.png) no-repeat center center;
+    /* background-size: cover; */
 }
-#chisiamo header p {
+#chisiamo header h5 {
     color: #fff;
     width: 50%;
+    margin-bottom: 270px;
 }
-.team{
+
+#chisiamo .team{
     overflow: hidden;
     text-align: center;
     background-color: black;
@@ -873,16 +875,57 @@ article .calendario{
 #chisiamo .card{
     flex-direction: column;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(128, 94, 67);
     padding: 10px 50px;
     justify-content: center;
     height: 50%;
     width: 30%;
     border-radius: 15px;
     margin:45px;
-    /* filter: grayscale(100%);
-    transition: 0.7s all; */
 }
-#chisisamo .card:hover{
-    /* filter: none;
-    } */
+
+#chisiamo .card{
+    filter: grayscale(100%);
+    transition: 0.7s all;
+}
+#chisiamo .card:hover{
+    filter: none;
+    transition: 0.7s all;
+}
+@media all and (max-width:575px){
+    #chisiamo .card{
+        width: 80%;
+    }
+    #chisiamo header h5 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
+@media all and (max-width:1000px)
+{
+    #chisiamo .card{
+        width: 80%;
+    }
+    #chisiamo header h5 {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
+@media all and (min-width:1000px){
+    #chisiamo .card{
+        width: 30%;
+    }
+    #chisiamo header h5 {
+        text-align: left;
+        margin-bottom: 200px;
+    }
+}
+
+
+
+
+
+/* filter: grayscale(100%);
+    transition: 0.7s all; */
