@@ -715,8 +715,8 @@ ul li {
 
 
 #aggio .spazio{
-    width: 100%;
-    padding-left:150px;
+    width: 70%;
+    padding-left:115px;
 }
 #aggio .colonna{
     display: flex;
@@ -838,6 +838,9 @@ h4{
     transform: none;
     transform-origin: none;
 }
+#aggio .colonna, .insalata{
+       width: 70%;
+}
 @media(max-width:900px){
     .store{
     display:flex;
@@ -848,7 +851,7 @@ h4{
         font-size: 2.5rem;
     }
     #aggio .spazio{
-        width: 100%;
+        width: 90%;
         padding-left: 25px;
     }
     #aggio article{
@@ -901,6 +904,9 @@ h4{
     }
 
 }
+#aggio .colonna, .insalata{
+    width: 100%;
+}
 
 @media(max-width:550px){
     #app h1{
@@ -919,10 +925,6 @@ h4{
         
     }
 
-    #aggio .spazio{
-        width: 100%;
-        padding-left: 25px;
-    }
  
     #aggio .insalata img {
         padding: 0px 0px 15px 20px;
@@ -937,6 +939,7 @@ h4{
         width:115px;
         
     }
+
 
 
     #aggio h3{
