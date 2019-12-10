@@ -35,7 +35,7 @@ header{
 }
 
 #home h1 {
-    font-size: 2.7rem;
+    font-size: 3rem;
     padding-top: 80px;
 }
 
@@ -291,6 +291,7 @@ footer p{
     color: #fff;
     padding: 10px;
     font-size: 14px;
+    text-align: left;
 }
 
 footer {
@@ -631,14 +632,13 @@ n
     }
 }
 
-/* @media(min-width:400) and (max-width:550px){ */
+@media(min-width:400) and (max-width:550px){
 
 .logo {
     padding: 20px 10px;
     width: 60px;
     height: auto;
     display: block;
-    align-self: ;
 }
 
 .navbar {
@@ -694,16 +694,19 @@ ul li {
     font-size: 18px;
 }
 
+}
 
 /* §§§§§§  QUI INIZIA IL CSS -APP- §§§§§§§ */
 #app{
     background: url(img/app.jpg) no-repeat center center;
     background-size: cover;
 }
-
+#aggio header{
+    height:auto;
+}
 #app h1{
     color:white;
-    font-size: 50px; 
+    font-size: 3.5rem; 
 }
 
 #app .testi-header{
@@ -711,16 +714,29 @@ ul li {
 }
 
 
-#aggio .img6 {
-    padding: 0px 0px 25px 50px;
+#aggio .spazio{
+    width: 100%;
+    padding-left:150px;
+}
+#aggio .colonna{
+    display: flex;
+    flex-direction: column;
+    padding:40px 0px;
+    padding-bottom:20px;
+}
+#aggio .insalata img {
+    padding:0px 0px 25px 50px;
+    height:63px;
+    width:213px;
 }
 
-#aggio  .img5{
-    padding-left: 150px;
+#aggio .img5{
+    padding-left: 5%;
 }
 #aggio .img15{
-
-    padding: 70px 0px 350px 350px;
+    padding: 0px 200px;
+    height:155px;
+    width:180px;
     
 }
 
@@ -733,67 +749,29 @@ ul li {
 .download{
     font-size: 60px;
 }
-.downloadimg{
-    flex-direction: row-reverse;
-    /* justify-content: space-between; */
-    padding-right:10px;
-
+  
+h4{
+    font-size: 3rem;
 }
-
-
-.content {
-    -ms-box-orient: horizontal;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    font-size: 30px;
-      
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-  }
-  
-  .now {
-    flex-grow: 3;
-    padding-left: 33px;
-  
-  }
-  
-
-  @media(max-width:1000px){
-    .content{
-      flex-direction: column;
-      
-    }
-    .store{
-        padding-left: 65px;
-    }
-     article{
-        width:100%;
-        flex-direction: column-reverse;
-    } 
-  }
-.colonna{
-    display: flex;
-    flex-direction: column;
-}
-
 .now {
+
+    flex-grow: 1;
+    padding-left: 33px;
+    display: flex;
     z-index: 2;
+    flex-direction: center;
+    justify-content: center;
 }
- .store {
-     flex-grow: 2;
+.store {
+    flex-grow:1;
      z-index: 2;
      display: flex;
      flex-direction: row;
-     justify-content: space-evenly;
- }
+     justify-content:center;
+}
+
+
+
 
  #aggio .black {
      height: auto;
@@ -803,7 +781,51 @@ ul li {
      z-index: 2;
  }
 
+
+
+#aggio .store img{
+    padding: 10px 50px;
+    height:42px;
+    width:140px;
+    height:63px;
+    width:213px;
+}
+
+
+ #aggio .black {
+     height: auto;
+ }
+#aggio article img{
+    width:80%;
+    height:auto;
+}
+#aggio .occhiali img{
+    width:100%;
+}
+ .hrbyaggio {
+     z-index: 2;
+ }
+
  #aggio .white + .black::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    transform-origin: none;
+}
+
+#aggio .store img{
+    padding: 10px 50px;
+
+}
+
+#aggio .white + .black::before {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -816,69 +838,132 @@ ul li {
     transform: none;
     transform-origin: none;
 }
-
-#aggio .store img{
-    padding: 10px 50px;
-}
-
-@media(max-width:1000px){
-    .content{
-      flex-direction: column;
-      
-    }
+@media(max-width:900px){
     .store{
-        padding-left: 65px;
-    }
-     article{
-        width:100%;
-        flex-direction: column;
-    } 
-}
-/* } */
-  /* #calendario header {
-    background: url(img/calendario.jpg) no-repeat center center;
-    background-size: cover;
-}
-#calendario header h1 {
-    font-size: 50px;
-    padding-top: 70px;
-}
-#calendario header p {
-    color: #fff;
-    width: 50%;
-}
-article .calendario{
-    width: 33.33%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.calendario img{
-    padding-top: 30px;
-    width: 70%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    align-self: auto;
-}
-.calendario h3{
-   padding-top: 30px;
-}
-.calendario p{
-    padding-bottom: 50px;
-} */
+    display:flex;
+        justify-content: space-around;
 
+    }
+    #app h1{
+        font-size: 2.5rem;
+    }
+    #aggio .spazio{
+        width: 100%;
+        padding-left: 25px;
+    }
+    #aggio article{
+        width: 100%;
+        
+    }
+    #aggio article img{
+        width:70%;
+        height:auto;
+    }
+    #aggio .occhiali img{
+        width:80%;
+    }
+    #aggio .media{
+        flex-direction: column-reverse;
+    }
+    #aggio main{
+        flex-direction: column;
+    }
+    #aggio .insalata img {
+        padding: 0px 0px 15px 50px;
+        height:42px;
+        width:140px;
+    }
+    
+    #aggio .img15{
+        padding-left: 155px;
+        padding-right:0px;
+        height:104px;
+        width:115px;
+        
+    }
+
+
+    #aggio .store img{
+        padding: 10px 50px;
+        height:52px;
+        width:175px;
+        }
+    #aggio .occhiali section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #aggio p{
+        font-size:1rem;
+        line-height: 20px;
+    }
+    #aggio main img{
+        padding-bottom: 20px;
+    }
+
+}
+
+@media(max-width:550px){
+    #app h1{
+        font-size: 2rem;
+    }
+
+    #aggio h2{
+        font-size:1.5rem;
+        line-height:15px;
+    }
+    #aggio p{
+        font-size:0.8rem;
+    }
+    #aggio h4{
+        font-size: 2rem;
+        
+    }
+
+    #aggio .spazio{
+        width: 100%;
+        padding-left: 25px;
+    }
+ 
+    #aggio .insalata img {
+        padding: 0px 0px 15px 20px;
+        height:42px;
+        width:140px;
+    }
+    
+    #aggio .img15{
+        padding-left: 115px;
+        padding-right:0px;
+        height:104px;
+        width:115px;
+        
+    }
+
+
+    #aggio h3{
+        font-size: 2rem;
+        padding-bottom:0px ;
+    }
+
+    #aggio .store img{
+        padding: 5px 25px;
+        height:42px;
+        width:120px;
+        }
+    #aggio .occhiali section{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+}
 /* Chi siamo */
 
 #chisiamo header {
     background: url(img/contatti.png) no-repeat center center;
-    /* background-size: cover; */
+    background-size: cover;
 }
-#chisiamo header h4 {
+#chisiamo header p {
     width: 50%;
+    padding-bottom: 80px;
 }
 
 #chisiamo .team{
@@ -989,8 +1074,9 @@ article .calendario{
         text-align: left;
         margin-top: 150px;
     }
-    #chisiamo header h4 {
+    #chisiamo header h5 {
         text-align: left;
-        margin-bottom: 150px;
+        padding-bottom: 100px;
+        width: 50%;
     }
 }
