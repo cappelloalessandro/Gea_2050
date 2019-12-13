@@ -35,7 +35,7 @@ header{
 }
 
 #home h1 {
-    font-size: 3rem;
+    font-size: 2.7rem;
     padding-top: 80px;
 }
 
@@ -250,6 +250,7 @@ article p {
 h2{
     font-size: 30px;
 }
+
 article a{
     color: #000;  
 }
@@ -264,6 +265,72 @@ article a{
 .subtitle {
     text-align: center;
     width: 50%;
+}
+
+.testi-header button {
+    font-family: 'audiowide', Arial, Helvetica, sans-serif;
+    margin-left: 20%;
+    margin-top: 6%;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: #fff;
+    width: 240px;
+    height: 50px;
+    border: #E0792B 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.testi-header button:focus {
+    outline: none;
+}
+
+.testi-header button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-130px) skew(-15deg);
+}
+
+.testi-header button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translate(100px) scaleX() (-15deg);
+}
+
+.testi-header button:hover {
+    background: #E0792B;
+    cursor: pointer;
+}
+
+.testi-header button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+.testi-header button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
 }
 
 /* sottotitoli terza fascia */
@@ -291,7 +358,6 @@ footer p{
     color: #fff;
     padding: 10px;
     font-size: 14px;
-    text-align: left;
 }
 
 footer {
@@ -364,7 +430,7 @@ n
     font-size: 1.5rem;
     padding-top: 10PX;
 }
-@media(max-width:900px){
+@media(max-width:800px){
     header img{
         padding:50px 0px 0px 25px;
     }
@@ -373,8 +439,9 @@ n
         padding-top: 60px;
     }
     #home h1{
-        font-size: 2.5rem;
+        font-size: 2.9rem;
         padding-left:25px;
+        padding-bottom: 30px;
     }
     main{
         padding-top:40px;
@@ -383,12 +450,36 @@ n
         align-items: center;
     }
 
+    .black article {
+        width: 100%;
+    }
+
+    article p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .white article p {
+        width: 88%;
+        text-align: left;
+    }
+
+    #index h2 {
+        align-self: center;
+    }
+
     .black{
         height: auto;
     }
     .white{
         flex-direction: column;
+        max-width: 100%;
     }
+
+    .white p {
+        padding-bottom: 0;
+    }
+
     footer{
         flex-direction: column-reverse;
 
@@ -414,6 +505,12 @@ n
     }
 }
 
+@media (max-height: 684px) {
+    .fa-chevron-down {
+        display: none;
+    }
+}
+
 @media(max-width:550px){
     #home h1{
         font-size: 2rem;
@@ -422,22 +519,46 @@ n
         line-height: 1.6;
     }
 
+    #scenari .black article .contenitore-interno {
+        width: 88%;
+    }
+
+    #scenari .white article .contenitore-interno {
+        width: 88%;
+    }
+
     h2 {
         font-size: 27px;
         text-align: center;
         padding: 20px 0;
     }
 
-    article p {
+    .black article p {
         width: 88%;
         padding: 0;
         padding-bottom: 70px;
-        text-align: center;
+        text-align: left;
     }
+
+    .white article {
+        width: 100%;
+        text-align: left;
+        align-self: center;
+    }
+
+    .testi-header button {
+        align-self: center;
+        margin-top: 50px;
+        background: #E0792B;
+        margin-left: 50%;
+    }
+
+
 
     #banner h2 {
         text-align: center;
         padding: 70px 0;
+        overflow: hidden;
         }
 
     #banner p {
@@ -449,8 +570,9 @@ n
         width: auto;
     }
 
-    article img {
-        width: inherit;
+    .white article img {
+        width: 80%;
+        padding-bottom: 30px;
     }
 
     nav li {
@@ -630,6 +752,11 @@ n
         width: 90%;
         font-size: 16px;
     }
+
+    #scenari header p {
+        color: #fff;
+        width: 90%;
+    }
 }
 
 @media(min-width:400) and (max-width:550px){
@@ -702,7 +829,7 @@ ul li {
     background-size: cover;
 }
 #aggio header{
-    height:auto;
+    height:100vh;
 }
 #app h1{
     color:white;
@@ -715,8 +842,8 @@ ul li {
 
 
 #aggio .spazio{
-    width: 70%;
-    padding-left:115px;
+    width: 100%;
+    padding-left:150px;
 }
 #aggio .colonna{
     display: flex;
@@ -838,9 +965,7 @@ h4{
     transform: none;
     transform-origin: none;
 }
-#aggio .colonna, .insalata{
-       width: 70%;
-}
+
 @media(max-width:900px){
     .store{
     display:flex;
@@ -851,7 +976,7 @@ h4{
         font-size: 2.5rem;
     }
     #aggio .spazio{
-        width: 90%;
+        width: 100%;
         padding-left: 25px;
     }
     #aggio article{
@@ -904,9 +1029,6 @@ h4{
     }
 
 }
-#aggio .colonna, .insalata{
-    width: 100%;
-}
 
 @media(max-width:550px){
     #app h1{
@@ -925,6 +1047,10 @@ h4{
         
     }
 
+    #aggio .spazio{
+        width: 100%;
+        padding-left: 25px;
+    }
  
     #aggio .insalata img {
         padding: 0px 0px 15px 20px;
@@ -939,7 +1065,6 @@ h4{
         width:115px;
         
     }
-
 
 
     #aggio h3{
@@ -958,128 +1083,138 @@ h4{
     }
 
 }
-/* Chi siamo */
+
+
+/* §§§§§§§§§§ CHI SIAMO §§§§§§§§§§§ */
 
 #chisiamo header {
     background: url(img/contatti.png) no-repeat center center;
     background-size: cover;
 }
-#chisiamo header p {
-    width: 50%;
-    padding-bottom: 80px;
+#chisiamo .container{
+    width: 80%;
+    margin: 0 auto;
 }
 
-#chisiamo .team{
-    overflow: hidden;
-    text-align: center;
-    background-color: black;
-    padding: 60px;
-}
-#chisiamo .team h2{
-    margin-bottom: 60px;
-    color:white;
-    font-size:40px;
-}
-#chisiamo .row{
+#chisiamo .nav-team{
     display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-#chisiamo .column {
+
+#chisiamo .logo2{
+    padding: 0;
+    width: 100px;
+    padding-right: 30px;
+}
+
+#chisiamo .nav{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+#chisiamo .nav li{
+padding: 0;
+}
+#chisiamo .titolazzo{
     justify-content: center;
-    text-align: center;
+    color: white;
+    
 }
 #chisiamo .bordo{
-    display:block;
-    margin:auto;
-    width: 260px;
-    height: 3px;
-    background: #fff;
-    margin-bottom: 40px;
-    margin-top: -40px;
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    margin: 25px 0px;
 }
-#chisiamo .bordodescrizione{
-    display:block;
-    margin:auto;
-    width: 260px;
-    height: 3px;
-    background: #fff;
-    margin-bottom: 10px;
-    margin-top: 20px;
+#chisiamo .metà{
+    width: 50%;
 }
-#chisiamo h3{
-    color: white;
-    margin-bottom: 25px;
+@media (max-width: 750px){
+    #chisiamo .metà{
+    width: 100%;
+        }
 }
-#chisiamo .row{
-    flex-wrap: wrap;
+#chisiamo p{
+    /* text-align: center; */
     justify-content: center;
+    color: white;
+    padding-bottom: 25px;
+}
+@media (min-width: 575px){
+    #chisiamo p, .titolazzo {
+        text-align: left;
+    }
+}
+#chisiamo .team{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+#chisiamo .titolazzo{
+    color: white;
 }
 #chisiamo .card{
-    display: flex;
-    flex-direction: column;
     text-align: center;
     background-color: rgb(128, 94, 67);
-    padding: 10px 50px;
+    padding: 15px 15px;
     justify-content: center;
-    height: 50%;
-    width: 30%;
     border-radius: 15px;
-    margin:45px;
     align-items: center;
+    margin: 10px;
+    filter: grayscale(100%);
+}
+@media (max-width: 575px){
+    #chisiamo .card{
+        margin: 10px 10px 30px 10px;
+    }
+}
+#chisiamo .bordazzo{
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+    margin: 25px;
+}
+@media all and (min-width:750px){
+    #chisiamo .team{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #chisiamo .card{
+        width: 40%;
+    }
+   
+}
+    
+#chisiamo .card:hover{
+    filter: none;
+}
+
+#chisiamo .card h3{
+    color: white;
+}
+#chisiamo .card>img{
+    margin-bottom: -25px;
+    width: auto;
+}
+#chisiamo .card p{
+    color: white;
+    text-align: center;
+    padding: 0 25px;
 }
 #chisiamo .social>a{
     color: white;
     font-size: 32px;
-    padding: 10px;
-}
-#chisiamo .social a:hover{
-    background: #E0792B;
-}
-
-#chisiamo .persona{
-    width: auto;
-    height: auto;
-}
-
-#chisiamo .card{
+    padding: 0 15px;
     filter: grayscale(100%);
-    transition: 0.7s all;
 }
-#chisiamo .card:hover{
-    filter: none;
-    transition: 0.7s all;
+#chisiamo .social>a{
+    color: white;
+    font-size: 32px;
+    padding: 0 15px;
 }
-@media all and (max-width:575px){
-    #chisiamo .card{
-        width: 80%;
-    }
-    #chisiamo header h4 {
-        text-align: center;
-        width: 100%;
-        margin-bottom: 100px;
-    }
-}
-@media all and (max-width:1000px)
-{
-    #chisiamo .card{
-        width: 80%;
-    }
-    #chisiamo header h4 {
-        text-align: left;
-        width: 100%;
-        margin-bottom: 60px;
-    }
-}
-@media all and (min-width:1000px){
-    #chisiamo .card{
-        width: 30%;
-    }
-    #chisiamo header h1 {
-        text-align: left;
-        margin-top: 150px;
-    }
-    #chisiamo header h5 {
-        text-align: left;
-        padding-bottom: 100px;
-        width: 50%;
-    }
+#chisiamo .social>a:hover{
+    color: black;
 }
