@@ -18,6 +18,7 @@ body{
     font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
+
 h1,
 h2,
 h3
@@ -35,7 +36,7 @@ header{
 }
 
 #home h1 {
-    font-size: 2.7rem;
+    font-size: 270%;
     padding-top: 80px;
 }
 
@@ -241,6 +242,10 @@ article h3 {
     transform: skewY(3deg);
 }
 
+button a {
+    color: white;
+}
+
 article p {
     width: 70%;
     padding-top: 30px;
@@ -349,7 +354,7 @@ section article {
 
 /* colore nero al footer */
 .wide{
-    background-color: #000;
+    background-color: #121212;
     padding: 20px;
 }
 
@@ -361,25 +366,34 @@ footer p{
 }
 
 footer {
-    display: flex;
-    padding: 30px 20px 60px;
-    background-color: black;
+    padding: 30px 20px;
+    background-color: #121212;
 }
 
 .menu_social {
     display: flex;
-    width: 300px;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center;
     color: #fff;
 }
+
+.menu_social a {
+    padding-left: 30px;
+    overflow: hidden;
+} 
 
 .menu_social span {
     font-size: 50px;
 }
 
+.social {
+    display: block;
+}
+
 footer h3 {
     margin-bottom: 10px;
     padding-left: 12px;
+    color: #fff;
 }
 
 footer a {
@@ -416,18 +430,22 @@ n
     text-shadow: 1px 1px 10px black;
     display: block;
 }
+
 .banner1{
-    background-image: url(img/banner_home.jpg);
+    background-image: url(img/banner_home-min.jpg);
 }
+
 .banner2{
-    background-image: url(img/banner_home3.jpg);
+    background-image: url(img/banner_home3-min.jpg);
 }
+
 #banner h2{
     padding-top: 200px;
-    font-size: 3rem;
+    font-size: 2.2rem;
 }
+
 #banner p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding-top: 10PX;
 }
 @media(max-width:800px){
@@ -511,6 +529,14 @@ n
     }
 }
 
+@media (max-height: 600px) {
+    header {
+        height: fit-content;
+        padding-bottom: 60px;
+    }
+}
+
+
 @media(max-width:550px){
     #home h1{
         font-size: 2rem;
@@ -518,6 +544,10 @@ n
         padding-top: 0px;
         line-height: 1.6;
     }
+    .menu_social a {
+        padding-left: 8px;
+        overflow: hidden;
+    } 
 
     #scenari .black article .contenitore-interno {
         width: 88%;
@@ -688,7 +718,7 @@ n
     width: inherit;
 }
 
-@media(max-width:400px) {
+@media(max-width:500px) {
     .fa-chevron-down {
         display: none;
     }
@@ -750,7 +780,7 @@ n
     
     #scenari header p {
         width: 90%;
-        font-size: 16px;
+        font-size: 18px;
     }
 
     #scenari header p {
@@ -1035,12 +1065,28 @@ h4{
         font-size: 2rem;
     }
 
+    .logo {
+        padding: 10px 10px;
+        width: 60px;
+        height: auto;
+        display: block;
+    }
+
+    header ul {
+        padding-right: 80px;
+    }
+
+    header ul li {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
     #aggio h2{
         font-size:1.5rem;
         line-height:15px;
     }
     #aggio p{
-        font-size:0.8rem;
+        font-size:1 rem;
     }
     #aggio h4{
         font-size: 2rem;
